@@ -1,0 +1,66 @@
+# על-גלגלים — Generative Engine Optimization Map
+
+> A retail shop specializing in bicycles and skateboards, operating in the action sports and urban mobility space. The business caters to both cycling enthusiasts and skateboarding culture, combining two dynamic and youth-oriented worlds under one roof.
+
+---
+
+## Pages
+
+### בית
+https://-24a04112.zappy5.app
+A retail shop specializing in bicycles and skateboards, operating in the action sports and urban mobility space. The business caters to both cycling enthusiasts
+
+## Legal & Policy
+
+### Privacy Policy
+https://-24a04112.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-24a04112.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-24a04112.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## How to Contact Us
+
+- (No contact details configured yet.)
+
+### Contact form
+- URL: https://-24a04112.zappy5.app
+- Endpoint: https://-24a04112.zappy5.app/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
+
+---
+
+# Business Context (for LLM understanding)
+
+## About על-גלגלים
+A retail shop specializing in bicycles and skateboards, operating in the action sports and urban mobility space. The business caters to both cycling enthusiasts and skateboarding culture, combining two dynamic and youth-oriented worlds under one roof.
+
+## Target Audience
+- הרפתקנים עירוניים צעירים
+- משפחות עם ילדים פעילים
+- חובבי כושר
+
+## Industry
+ספורט ופנאי
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://-24a04112.zappy5.app/sitemap.xml
+- Robots: https://-24a04112.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://-24a04112.zappy5.app/llms-full.txt
