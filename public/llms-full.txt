@@ -2,13 +2,13 @@
 
 A retail shop specializing in bicycles and skateboards, operating in the action sports and urban mobility space. The business caters to both cycling enthusiasts and skateboarding culture, combining two dynamic and youth-oriented worlds under one roof.
 
-Source: https://-24a04112.zappy5.app
+Source: https://example.com
 
 ---
 
 ## על-גלגלים — על-גלגלים
 
-URL: https://-24a04112.zappy5.app
+URL: https://example.com
 Description: A retail shop specializing in bicycles and skateboards, operating in the action sports and urban mobility space. The business caters to both cycling enthusiasts
 
 על-גלגלים — על-גלגלים
@@ -833,7 +833,7 @@ PRO
 
 ## מדיניות פרטיות
 
-URL: https://-24a04112.zappy5.app/privacy
+URL: https://example.com/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -1088,7 +1088,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://-24a04112.zappy5.app/accessibility
+URL: https://example.com/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -1352,7 +1352,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://-24a04112.zappy5.app/terms
+URL: https://example.com/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
