@@ -344,19 +344,17 @@
 <body>
 <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
   <nav class="navbar navbar--hamburger-design" dir="rtl" id="mainNavbar">
-    <!-- Logo on right -->
+    <!-- Logo + Hamburger on right side -->
     <div class="navbar__logo-side">
       <a href="/" class="logo-link navbar__logo-link">
         <img class="logo navbar__logo-img" src="/assets/site-----image-1.webp" alt="על-גלגלים">
       </a>
+      <button class="navbar__hamburger-btn" id="navDrawerToggle" aria-label="פתח תפריט" aria-expanded="false" aria-controls="navDrawer">
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+      </button>
     </div>
-
-    <!-- Hamburger button on left (desktop + mobile) -->
-    <button class="navbar__hamburger-btn" id="navDrawerToggle" aria-label="פתח תפריט" aria-expanded="false" aria-controls="navDrawer">
-      <span class="navbar__hamburger-bar"></span>
-      <span class="navbar__hamburger-bar"></span>
-      <span class="navbar__hamburger-bar"></span>
-    </button>
 
     <!-- Overlay backdrop -->
     <div class="navbar__drawer-overlay" id="navDrawerOverlay" aria-hidden="true"></div>
@@ -419,10 +417,11 @@
       box-shadow: 0 2px 20px rgba(0,0,0,0.3);
     }
 
-    /* Logo side (right in RTL) */
+    /* Logo + hamburger group on the RIGHT side (RTL) */
     .navbar__logo-side {
       display: flex;
       align-items: center;
+      gap: 16px;
     }
 
     .navbar__logo-link {
@@ -437,7 +436,7 @@
       object-fit: contain;
     }
 
-    /* Hamburger button (left in RTL = end side) */
+    /* Hamburger button — sits right next to logo */
     .navbar__hamburger-btn {
       display: flex;
       flex-direction: column;
@@ -504,21 +503,21 @@
       pointer-events: auto;
     }
 
-    /* === DRAWER === */
+    /* === DRAWER (opens from RIGHT) === */
     .navbar__drawer {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 0;
       bottom: 0;
       width: 300px;
       max-width: 85vw;
       background: #1a1e23;
-      border-right: 1px solid rgba(246, 240, 232, 0.08);
+      border-left: 1px solid rgba(246, 240, 232, 0.08);
       z-index: 1002;
       display: flex;
       flex-direction: column;
       padding: 0;
-      transform: translateX(-100%);
+      transform: translateX(100%);
       transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
       overflow-y: auto;
     }

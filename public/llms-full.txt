@@ -71,8 +71,6 @@ Description: A retail shop specializing in bicycles and skateboards, operating i
 
 
 
-
-
 - תכונות
 
 - יתרונות
@@ -906,8 +904,6 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 
 
-
-
 - תכונות
 
 - יתרונות
@@ -1138,8 +1134,6 @@ URL: https://example.com/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
-
-
 
 
 
@@ -1423,8 +1417,6 @@ URL: https://example.com/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
-
-
 
 
 

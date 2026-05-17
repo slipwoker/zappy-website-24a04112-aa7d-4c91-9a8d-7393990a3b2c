@@ -332,19 +332,17 @@
 <body>
 
     <nav class="navbar navbar--hamburger-design" dir="rtl" id="mainNavbar">
-    <!-- Logo on right -->
+    <!-- Logo + Hamburger on right side -->
     <div class="navbar__logo-side">
       <a href="/" class="logo-link navbar__logo-link">
         <img class="logo navbar__logo-img" src="/assets/site-----image-1.webp" alt="על-גלגלים">
       </a>
+      <button class="navbar__hamburger-btn" id="navDrawerToggle" aria-label="פתח תפריט" aria-expanded="false" aria-controls="navDrawer">
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+      </button>
     </div>
-
-    <!-- Hamburger button on left (desktop + mobile) -->
-    <button class="navbar__hamburger-btn" id="navDrawerToggle" aria-label="פתח תפריט" aria-expanded="false" aria-controls="navDrawer">
-      <span class="navbar__hamburger-bar"></span>
-      <span class="navbar__hamburger-bar"></span>
-      <span class="navbar__hamburger-bar"></span>
-    </button>
 
     <!-- Overlay backdrop -->
     <div class="navbar__drawer-overlay" id="navDrawerOverlay" aria-hidden="true"></div>
