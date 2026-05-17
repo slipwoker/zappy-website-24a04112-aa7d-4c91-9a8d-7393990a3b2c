@@ -3726,9 +3726,10 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   font-weight: 700;
 }
 
+/* ── Asymmetric grid ── */
 .index-showcase-section .index-showcase-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 24px;
   direction: rtl;
