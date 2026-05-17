@@ -6169,6 +6169,17 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 ._access-icon {
   display: flex !important;
 }
+
+.index-hero-section,
+.index-features-section,
+.index-benefits-section,
+.index-showcase-section,
+.index-testimonials-section,
+.index-stats-section,
+.index-contact-section {
+  isolation: auto !important;
+  z-index: auto !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
