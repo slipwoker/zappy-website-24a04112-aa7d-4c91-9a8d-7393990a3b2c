@@ -343,34 +343,363 @@
 </head>
 <body>
 <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
-  <nav class="navbar" dir="rtl">
-  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  </button>
-
-  <button class="phone-header-btn" data-phone="[business_phone]" aria-label="Call">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-    </svg>
-  </button>
-
-  <div class="nav-container">
-    <div class="nav-right-group"><div class="nav-brand">
-      <a href="/" class="logo-link"><img class="logo" src="/assets/site-----image-1.webp" alt="על-גלגלים" /></a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="#features">תכונות</a></li><li><a href="#benefits">יתרונות</a></li><li><a href="#showcase">גלריה</a></li><li><a href="#testimonials">המלצות</a></li><li><a href="#stats">נתונים</a></li></ul></div>
-
-    
-
-    <div class="nav-cta-container">
-      <a href="#contact" class="nav-cta-btn">צור קשר</a>
+  <nav class="navbar navbar--hamburger-design" dir="rtl" id="mainNavbar">
+    <!-- Logo on right -->
+    <div class="navbar__logo-side">
+      <a href="/" class="logo-link navbar__logo-link">
+        <img class="logo navbar__logo-img" src="/assets/site-----image-1.webp" alt="על-גלגלים" />
+      </a>
     </div>
-  </div>
-</nav>
+
+    <!-- Hamburger button on left (desktop + mobile) -->
+    <button class="navbar__hamburger-btn" id="navDrawerToggle" aria-label="פתח תפריט" aria-expanded="false" aria-controls="navDrawer">
+      <span class="navbar__hamburger-bar"></span>
+      <span class="navbar__hamburger-bar"></span>
+      <span class="navbar__hamburger-bar"></span>
+    </button>
+
+    <!-- Overlay backdrop -->
+    <div class="navbar__drawer-overlay" id="navDrawerOverlay" aria-hidden="true"></div>
+
+    <!-- Slide-in Drawer -->
+    <aside class="navbar__drawer" id="navDrawer" role="navigation" aria-label="תפריט ראשי" aria-hidden="true">
+      <!-- Drawer header -->
+      <div class="navbar__drawer-header">
+        <img class="navbar__drawer-logo" src="/assets/site-----image-1.webp" alt="על-גלגלים" />
+        <button class="navbar__drawer-close" id="navDrawerClose" aria-label="סגור תפריט">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Nav links -->
+      <ul class="navbar__drawer-menu" id="navMenu">
+        <li><a href="#features" class="navbar__drawer-link">תכונות</a></li>
+        <li><a href="#benefits" class="navbar__drawer-link">יתרונות</a></li>
+        <li><a href="#showcase" class="navbar__drawer-link">גלריה</a></li>
+        <li><a href="#testimonials" class="navbar__drawer-link">המלצות</a></li>
+        <li><a href="#stats" class="navbar__drawer-link">נתונים</a></li>
+      </ul>
+
+      <!-- CTA inside drawer -->
+      <div class="navbar__drawer-cta">
+        <a href="#contact" class="nav-cta-btn navbar__drawer-cta-btn">צור קשר</a>
+      </div>
+    </aside>
+  </nav>
+
+  <style>
+    /* =============================
+       HAMBURGER NAVBAR DESIGN
+       ============================= */
+
+    /* Reset old nav structure */
+    .navbar--hamburger-design {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      height: 70px;
+      background: rgba(30, 34, 39, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(246, 240, 232, 0.08);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .navbar--hamburger-design.scrolled {
+      background: rgba(30, 34, 39, 0.98);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Logo side (right in RTL) */
+    .navbar__logo-side {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar__logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .navbar__logo-img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Hamburger button (left in RTL = end side) */
+    .navbar__hamburger-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      background: rgba(246, 240, 232, 0.07);
+      border: 1px solid rgba(246, 240, 232, 0.15);
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 10px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .navbar__hamburger-btn:hover {
+      background: rgba(49, 91, 255, 0.18);
+      border-color: rgba(49, 91, 255, 0.4);
+    }
+
+    .navbar__hamburger-btn.is-open {
+      background: rgba(49, 91, 255, 0.22);
+      border-color: rgba(49, 91, 255, 0.5);
+    }
+
+    .navbar__hamburger-bar {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--nav-text, #F6F0E8);
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+      transform-origin: center;
+    }
+
+    /* Animate bars to X when open */
+    .navbar__hamburger-btn.is-open .navbar__hamburger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .navbar__hamburger-btn.is-open .navbar__hamburger-bar:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .navbar__hamburger-btn.is-open .navbar__hamburger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* === OVERLAY === */
+    .navbar__drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(3px);
+      z-index: 1001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .navbar__drawer-overlay.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* === DRAWER === */
+    .navbar__drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      max-width: 85vw;
+      background: #1a1e23;
+      border-right: 1px solid rgba(246, 240, 232, 0.08);
+      z-index: 1002;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      transform: translateX(-100%);
+      transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+    }
+
+    .navbar__drawer.is-open {
+      transform: translateX(0);
+    }
+
+    /* Drawer header */
+    .navbar__drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(246, 240, 232, 0.08);
+      flex-shrink: 0;
+    }
+
+    .navbar__drawer-logo {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .navbar__drawer-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(246, 240, 232, 0.06);
+      border: 1px solid rgba(246, 240, 232, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--nav-text, #F6F0E8);
+      transition: background 0.2s ease;
+    }
+
+    .navbar__drawer-close:hover {
+      background: rgba(255, 107, 74, 0.18);
+      border-color: rgba(255, 107, 74, 0.4);
+      color: var(--secondary, #FF6B4A);
+    }
+
+    /* Drawer menu links */
+    .navbar__drawer-menu {
+      list-style: none;
+      margin: 0;
+      padding: 16px 0;
+      flex: 1;
+    }
+
+    .navbar__drawer-menu li {
+      border-bottom: 1px solid rgba(246, 240, 232, 0.05);
+    }
+
+    .navbar__drawer-link {
+      display: flex;
+      align-items: center;
+      padding: 16px 28px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--nav-text, #F6F0E8);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.2s ease, background 0.2s ease, padding-right 0.2s ease;
+      position: relative;
+    }
+
+    .navbar__drawer-link::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) scaleY(0);
+      width: 3px;
+      height: 60%;
+      background: var(--primary, #315BFF);
+      border-radius: 0 2px 2px 0;
+      transition: transform 0.2s ease;
+    }
+
+    .navbar__drawer-link:hover {
+      color: var(--nav-text-hover, #72E6C8);
+      background: rgba(114, 230, 200, 0.05);
+      padding-right: 36px;
+    }
+
+    .navbar__drawer-link:hover::before {
+      transform: translateY(-50%) scaleY(1);
+      background: var(--accent, #72E6C8);
+    }
+
+    /* Drawer CTA */
+    .navbar__drawer-cta {
+      padding: 24px 28px;
+      border-top: 1px solid rgba(246, 240, 232, 0.08);
+      flex-shrink: 0;
+    }
+
+    .navbar__drawer-cta-btn {
+      display: block;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Mobile adjustments (keep it consistent) */
+    @media (max-width: 768px) {
+      .navbar--hamburger-design {
+        padding: 0 16px;
+        height: 60px;
+      }
+      .navbar__drawer {
+        width: 280px;
+      }
+    }
+  </style>
+
+  <script>
+  (function() {
+    window.addEventListener('DOMContentLoaded', function() {
+      var toggleBtn = document.getElementById('navDrawerToggle');
+      var closeBtn = document.getElementById('navDrawerClose');
+      var overlay = document.getElementById('navDrawerOverlay');
+      var drawer = document.getElementById('navDrawer');
+      var navbar = document.getElementById('mainNavbar');
+
+      if (!toggleBtn || !drawer) return;
+
+      function openDrawer() {
+        drawer.classList.add('is-open');
+        overlay.classList.add('is-visible');
+        toggleBtn.classList.add('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        drawer.classList.remove('is-open');
+        overlay.classList.remove('is-visible');
+        toggleBtn.classList.remove('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      toggleBtn.addEventListener('click', function() {
+        if (drawer.classList.contains('is-open')) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (overlay) overlay.addEventListener('click', closeDrawer);
+
+      // Close on nav link click
+      var links = drawer.querySelectorAll('.navbar__drawer-link, .navbar__drawer-cta-btn');
+      links.forEach(function(link) {
+        link.addEventListener('click', closeDrawer);
+      });
+
+      // Keyboard: close on Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) closeDrawer();
+      });
+
+      // Scrolled class
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }, { passive: true });
+    });
+  })();
+  </script>
 <script>
 
 // Navbar Mobile Menu Toggle and Contrast Fix
